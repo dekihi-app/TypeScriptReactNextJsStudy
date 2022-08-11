@@ -12,24 +12,26 @@ import reportWebVitals from "./reportWebVitals";
 // import { Parent } from "./components/Parent";
 // import { Parent as UseCallbackParent } from "./components/UseCallbackSample";
 // import { UseMemoSample } from "./components/UseMemoSample";
-import { Clock } from "./components/Clock";
+// import { Clock } from "./components/Clock";
+import { Parent as UseContextParent } from "./components/UseContextSample";
 
 const container = document.getElementById("root");
 if (container !== null) {
   const root = createRoot(container);
   root.render(
-    //   <App />
-    //   <Hello />
-    //   <ContainerSampleParent />
-    //   <Page />
-    //   <Page />
-    //   <UseStateCounter initialValue={0} />
-    //   <UseReducerCounter initialValue={0} />
-    //   <Parent />
-    //   <UseCallbackParent />,
+    //  <App />
+    //  <Hello />
+    //  <ContainerSampleParent />
+    //  <Page />
+    //  <Page />
+    //  <UseStateCounter initialValue={0} />
+    //  <UseReducerCounter initialValue={0} />
+    //  <Parent />
+    //  <UseCallbackParent />,
     //  <UseMemoSample />
+    //  <Clock />
     <React.StrictMode>
-      <Clock />
+      <UseContextParent />
     </React.StrictMode>
   );  
 }
