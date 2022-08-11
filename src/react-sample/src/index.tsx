@@ -13,7 +13,8 @@ import reportWebVitals from "./reportWebVitals";
 // import { Parent as UseCallbackParent } from "./components/UseCallbackSample";
 // import { UseMemoSample } from "./components/UseMemoSample";
 // import { Clock } from "./components/Clock";
-import { Parent as UseContextParent } from "./components/UseContextSample";
+// import { Parent as UseContextParent } from "./components/UseContextSample";
+import { ImageUploader } from "./components/useRefSample"
 
 const container = document.getElementById("root");
 if (container !== null) {
@@ -30,8 +31,9 @@ if (container !== null) {
     //  <UseCallbackParent />,
     //  <UseMemoSample />
     //  <Clock />
+    // <UseContextParent />
     <React.StrictMode>
-      <UseContextParent />
+      <ImageUploader />
     </React.StrictMode>
   );  
 }
