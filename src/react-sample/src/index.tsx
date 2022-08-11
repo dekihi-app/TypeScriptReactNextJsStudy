@@ -4,10 +4,16 @@
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Hello from './components/Hello';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import Hello from "./components/Hello";
+import { Parent as ContainerSampleParent } from "./components/ContainerSample";
+import { Page } from "./components/ContextSample";
+import { Counter as UseStateCounter } from "./components/UseStateSample";
+import { Counter as UseReducerCounter } from "./components/UseReducerSample";
+import { Parent } from "./components/Parent";
 
 // const root = ReactDOM.createRoot(
 //   document.getElementById('root') as HTMLElement
@@ -21,8 +27,15 @@ import Hello from './components/Hello';
 ReactDOM.render(
   <React.StrictMode>
     <Hello />
+    <ContainerSampleParent />
+    <Page />
+    <Page />
+    <UseStateCounter initialValue={0} />
+    <UseReducerCounter initialValue={0} />
+    <Parent />
+    <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -2,7 +2,7 @@ import React from "react";
 
 type ContainerProps = {
   title: string;
-  children: React.ReactNode
+  children: React.ReactNode;
 };
 
 const Container = (props: ContainerProps) => {
@@ -16,12 +16,10 @@ const Container = (props: ContainerProps) => {
   );
 };
 
-const Parent = () => {
+export const Parent = () => {
   return (
     <Container title="Hello">
       <p>ここの部分が背景色で囲まれます</p>
     </Container>
   );
 };
-
-export default Parent;
