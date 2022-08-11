@@ -14,7 +14,8 @@ import reportWebVitals from "./reportWebVitals";
 // import { UseMemoSample } from "./components/UseMemoSample";
 // import { Clock } from "./components/Clock";
 // import { Parent as UseContextParent } from "./components/UseContextSample";
-import { ImageUploader } from "./components/useRefSample"
+// import { ImageUploader } from "./components/UseRefSample";
+import { Parent as UseImperativeHandleParent } from "./components/UseImperativeHandle";
 
 const container = document.getElementById("root");
 if (container !== null) {
@@ -32,10 +33,11 @@ if (container !== null) {
     //  <UseMemoSample />
     //  <Clock />
     // <UseContextParent />
+    // <ImageUploader />
     <React.StrictMode>
-      <ImageUploader />
+      <UseImperativeHandleParent />
     </React.StrictMode>
-  );  
+  );
 }
 
 // If you want to start measuring performance in your app, pass a function
