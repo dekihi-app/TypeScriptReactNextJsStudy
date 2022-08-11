@@ -15,7 +15,8 @@ import reportWebVitals from "./reportWebVitals";
 // import { Clock } from "./components/Clock";
 // import { Parent as UseContextParent } from "./components/UseContextSample";
 // import { ImageUploader } from "./components/UseRefSample";
-import { Parent as UseImperativeHandleParent } from "./components/UseImperativeHandle";
+// import { Parent as UseImperativeHandleParent } from "./components/UseImperativeHandle";
+import { Input as CustomHookInput } from "./components/CustomHook";
 
 const container = document.getElementById("root");
 if (container !== null) {
@@ -34,8 +35,9 @@ if (container !== null) {
     //  <Clock />
     // <UseContextParent />
     // <ImageUploader />
+    // <UseImperativeHandleParent />
     <React.StrictMode>
-      <UseImperativeHandleParent />
+      <CustomHookInput />
     </React.StrictMode>
   );
 }
