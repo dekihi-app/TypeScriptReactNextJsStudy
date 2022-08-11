@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React from "react";
 
 type FizzProps = {
   isFizz: boolean;
@@ -20,7 +20,7 @@ type BuzzProps = {
 // Buzzはメモ化した関数コンポーネント
 // isBuzzがtrueの場合はBuzzと表示し、それ以外は何も表示しない
 // 親コンポーネントが再描画されても、isBuzzが変化しない限りはBuzzは再描画しない
-const Buzz = memo<BuzzProps>((props) => {
+const Buzz = React.memo<BuzzProps>((props) => {
   const { isBuzz } = props;
   console.log(`Buzzが再描画されました、isBuzz=${isBuzz}`);
   return <span>{isBuzz ? "Buzz" : ""}</span>;
@@ -28,7 +28,7 @@ const Buzz = memo<BuzzProps>((props) => {
 
 // この形式でexportしたときはimport { parent } from... で読み込む
 export const Parent = () => {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = React.useState(1);
   const isFizz = count % 3 === 0;
   const isBuzz = count % 5 === 0;
 

@@ -14,6 +14,7 @@ import { Page } from "./components/ContextSample";
 import { Counter as UseStateCounter } from "./components/UseStateSample";
 import { Counter as UseReducerCounter } from "./components/UseReducerSample";
 import { Parent } from "./components/Parent";
+import { Parent as UseCallbackParent } from "./components/UseCallbackSample";
 
 // const root = ReactDOM.createRoot(
 //   document.getElementById('root') as HTMLElement
@@ -25,16 +26,17 @@ import { Parent } from "./components/Parent";
 // );
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Hello />
-    <ContainerSampleParent />
-    <Page />
-    <Page />
-    <UseStateCounter initialValue={0} />
-    <UseReducerCounter initialValue={0} />
-    <Parent />
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  //   <Hello />
+  //   <ContainerSampleParent />
+  //   <Page />
+  //   <Page />
+  //   <UseStateCounter initialValue={0} />
+  //   <UseReducerCounter initialValue={0} />
+  //   <Parent />
+    <UseCallbackParent />,
+  //   <App />
+  // </React.StrictMode>,
   document.getElementById("root")
 );
 
