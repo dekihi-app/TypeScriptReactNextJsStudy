@@ -11,12 +11,14 @@ import reportWebVitals from "./reportWebVitals";
 // import { Counter as UseReducerCounter } from "./components/UseReducerSample";
 // import { Parent } from "./components/Parent";
 // import { Parent as UseCallbackParent } from "./components/UseCallbackSample";
-import { UseMemoSample } from "./components/UseMemoSample";
+// import { UseMemoSample } from "./components/UseMemoSample";
+import { Clock } from "./components/Clock";
 
 const container = document.getElementById("root");
-if (container) {
+if (container !== null) {
   const root = createRoot(container);
   root.render(
+    //   <App />
     //   <Hello />
     //   <ContainerSampleParent />
     //   <Page />
@@ -25,10 +27,10 @@ if (container) {
     //   <UseReducerCounter initialValue={0} />
     //   <Parent />
     //   <UseCallbackParent />,
+    //  <UseMemoSample />
     <React.StrictMode>
-      <UseMemoSample />
+      <Clock />
     </React.StrictMode>
-    //   <App />
   );  
 }
 
