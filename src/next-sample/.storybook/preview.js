@@ -6,4 +6,23 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+  // viewport: {
+  //   viewports: {
+  //     iphonex: {
+  //       name: "iphone X",
+  //       styles: {
+  //         width: "375px",
+  //         height: "812px",
+  //       },
+  //     },
+  //   },
+  // },
+  // backgrounds: {
+  //   values: [
+  //     {
+  //       name: "gray",
+  //       value: "#808080",
+  //     },
+  //   ],
+  // },
+};

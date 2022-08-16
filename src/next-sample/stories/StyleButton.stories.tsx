@@ -1,5 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { linkTo } from "@storybook/addon-links";
 import { StyledButton } from "../components/StyledButton";
+import MDXDocument from "./StyledButton.mdx";
 
 // ファイル内のStoryの設定（メタデータオブジェクト）
 export default {
@@ -7,6 +9,12 @@ export default {
   title: "StyledButton",
   // 使用するコンポーネント
   component: StyledButton,
+  parameters: {
+    docs: {
+      // ドキュメント用のmdxコンポーネントを指定
+      page: MDXDocument,
+    },
+  },
   // propsに渡すvariantをstorybookから変更できるように追加
   variant: {
     // ラジオボタンで設定できるように指定
@@ -18,8 +26,6 @@ export default {
     // テキストボックスで入力できるように指定
     control: { type: "text" },
   },
-  // onClickが呼ばれたときにclickedというアクションを出力する
-  argTypes: { onClick: { action: "clicked" } },
 } as ComponentMeta<typeof StyledButton>;
 
 // テンプレートコンポーネントを実装
@@ -36,26 +42,38 @@ TemplateTest.args = {
   children: "primary",
 };
 
-// export const Primary: ComponentStory<typeof StyledButton> = (props) => {
-//   return (
-//     <StyledButton {...props} variant="primary">
-//       Primary
-//     </StyledButton>
-//   );
-// };
+export const Primary: ComponentStory<typeof StyledButton> = (props) => {
+  return (
+    <StyledButton
+      {...props}
+      variant="primary"
+      onClick={linkTo("StyledButton", "Success")}
+    >
+      Primary
+    </StyledButton>
+  );
+};
 
-// export const Success: ComponentStory<typeof StyledButton> = (props) => {
-//   return (
-//     <StyledButton {...props} variant="success">
-//       Success
-//     </StyledButton>
-//   );
-// };
+export const Success: ComponentStory<typeof StyledButton> = (props) => {
+  return (
+    <StyledButton
+      {...props}
+      variant="success"
+      onClick={linkTo("StyledButton", "Transparent")}
+    >
+      Success
+    </StyledButton>
+  );
+};
 
-// export const Transparent: ComponentStory<typeof StyledButton> = (props) => {
-//   return (
-//     <StyledButton {...props} variant="transparent">
-//       Transparent
-//     </StyledButton>
-//   );
-// };
+export const Transparent: ComponentStory<typeof StyledButton> = (props) => {
+  return (
+    <StyledButton
+      {...props}
+      variant="transparent"
+      onClick={linkTo("StyledButton", "Primary")}
+    >
+      Transparent
+    </StyledButton>
+  );
+};
